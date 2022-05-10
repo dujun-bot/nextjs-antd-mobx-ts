@@ -16,6 +16,12 @@
         "camel2DashComponentName": false
       },
       "@ant-design/icons"
+    ],
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
     ]
   ]
 }

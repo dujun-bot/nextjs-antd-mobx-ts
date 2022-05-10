@@ -9,12 +9,12 @@ const { Sider } = Layout;
 
 const AppSider = () => {
   const route = useRouter();
-  const [selectkey, useSelectKey] = useState('');
+  const [selectKey, useSelectKey] = useState('');
   const { pathname } = route;
 
   useEffect(() => {
-    const menukey = _.chain(pathname).split('/').last().value();
-    useSelectKey(`/${menukey}`);
+    const menuKey = _.chain(pathname).split('/').last().value();
+    useSelectKey(`/${menuKey}`);
   }, [pathname]);
 
   const menusClick = ({ key, keyPath }) => {
@@ -30,7 +30,7 @@ const AppSider = () => {
         mode='inline'
         defaultSelectedKeys={['/originData']}
         defaultOpenKeys={['/metadata']}
-        selectedKeys={[selectkey]}
+        selectedKeys={[selectKey]}
         onClick={menusClick}
         style={{
           height: '100%',
